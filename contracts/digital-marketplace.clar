@@ -128,7 +128,7 @@
                 content-summary: summary,
                 content-type: content-type,
                 tradeable: true,
-                creation-block: block-height
+                creation-block: stacks-block-height
             }
         )
         
@@ -163,7 +163,7 @@
         (map-set exchange-records
             { customer: tx-sender, item-id: item-id }
             {
-                timestamp: block-height,
+                timestamp: stacks-block-height,
                 cost: total-cost,
                 merchant: merchant
             }
@@ -180,7 +180,7 @@
                 {
                     trade-count: (+ (get trade-count merchant-stats) u1),
                     quality-score: (get quality-score merchant-stats),
-                    last-active: block-height
+                    last-active: stacks-block-height
                 }
             )
         )
